@@ -140,7 +140,7 @@ if ($response->Ack !== 'Failure') {
              * Save the attachment to file system's temporary directory.
              */
             $tempFilename = tempnam(sys_get_temp_dir(), 'category-specifics-').'.zip';
-            $fp = fopen($tempFilename, 'wb');
+            $fp = fopen($tempFilename, 'w');
             if (!$fp) {
                 printf("Failed. Cannot open %s to write!\n", $tempFilename);
             } else {
